@@ -14,19 +14,20 @@ class Todo {
     let created: Date
     var updated: Date?
     
-    init() {
-        self.text = ""
+    init(text: String) {
+        self.text = text
         self.done = false
         self.created = Date()
         self.updated = nil
     }
     
-    func toggleDone() {
-        self.done = !self.done
-    }
-    
     func wasUpdated() {
         self.updated = Date()
+    }
+    
+    func toggleDone() {
+        self.done = !self.done
+        self.wasUpdated()
     }
     
     func updateText(newText: String) {
