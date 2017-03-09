@@ -9,7 +9,7 @@
 import XCTest
 @testable import Done
 
-class TodoNewTests: XCTestCase {
+class TodoDefaultAttributesTests: XCTestCase {
     var todo: Todo!
     
     override func setUp() {
