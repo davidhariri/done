@@ -14,7 +14,7 @@ class TodoNewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        todo = Todo(text: "Todo")
+        todo = Todo(text: "Test")
     }
     
     override func tearDown() {
@@ -31,6 +31,6 @@ class TodoNewTests: XCTestCase {
     }
     
     func testThatItHasNoUpdatedValue() {
-        XCTAssert(todo.updated == nil)
+        XCTAssert(todo.updated == nil, ".updated was not nil")
     }
 }
