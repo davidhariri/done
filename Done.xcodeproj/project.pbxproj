@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFB1DD471E71849F00E19749 /* DoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1DD461E71849F00E19749 /* DoneTests.swift */; };
 		EFC78F181E703EDE000C86BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F171E703EDE000C86BD /* AppDelegate.swift */; };
 		EFC78F1A1E703EDE000C86BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F191E703EDE000C86BD /* ViewController.swift */; };
 		EFC78F1D1E703EDE000C86BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F1B1E703EDE000C86BD /* Main.storyboard */; };
@@ -15,7 +16,20 @@
 		EFC78F2A1E7040D3000C86BD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F291E7040D3000C86BD /* Todo.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EFB1DD491E71849F00E19749 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFC78F0C1E703EDE000C86BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC78F131E703EDE000C86BD;
+			remoteInfo = Done;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EFB1DD441E71849F00E19749 /* DoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB1DD461E71849F00E19749 /* DoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTests.swift; sourceTree = "<group>"; };
+		EFB1DD481E71849F00E19749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC78F141E703EDE000C86BD /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC78F171E703EDE000C86BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC78F191E703EDE000C86BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EFB1DD411E71849F00E19749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC78F111E703EDE000C86BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +58,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFB1DD451E71849F00E19749 /* DoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFB1DD461E71849F00E19749 /* DoneTests.swift */,
+				EFB1DD481E71849F00E19749 /* Info.plist */,
+			);
+			path = DoneTests;
+			sourceTree = "<group>";
+		};
 		EFC78F0B1E703EDE000C86BD = {
 			isa = PBXGroup;
 			children = (
 				EFC78F161E703EDE000C86BD /* Done */,
+				EFB1DD451E71849F00E19749 /* DoneTests */,
 				EFC78F151E703EDE000C86BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC78F141E703EDE000C86BD /* Done.app */,
+				EFB1DD441E71849F00E19749 /* DoneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +102,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EFB1DD431E71849F00E19749 /* DoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFB1DD4D1E71849F00E19749 /* Build configuration list for PBXNativeTarget "DoneTests" */;
+			buildPhases = (
+				EFB1DD401E71849F00E19749 /* Sources */,
+				EFB1DD411E71849F00E19749 /* Frameworks */,
+				EFB1DD421E71849F00E19749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFB1DD4A1E71849F00E19749 /* PBXTargetDependency */,
+			);
+			name = DoneTests;
+			productName = DoneTests;
+			productReference = EFB1DD441E71849F00E19749 /* DoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EFC78F131E703EDE000C86BD /* Done */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC78F261E703EDE000C86BD /* Build configuration list for PBXNativeTarget "Done" */;
@@ -97,6 +147,12 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "David Hariri";
 				TargetAttributes = {
+					EFB1DD431E71849F00E19749 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QVX44SZ46V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFC78F131E703EDE000C86BD;
+					};
 					EFC78F131E703EDE000C86BD = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QVX44SZ46V;
@@ -118,11 +174,19 @@
 			projectRoot = "";
 			targets = (
 				EFC78F131E703EDE000C86BD /* Done */,
+				EFB1DD431E71849F00E19749 /* DoneTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EFB1DD421E71849F00E19749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC78F121E703EDE000C86BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +200,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EFB1DD401E71849F00E19749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB1DD471E71849F00E19749 /* DoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFC78F101E703EDE000C86BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +219,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFB1DD4A1E71849F00E19749 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC78F131E703EDE000C86BD /* Done */;
+			targetProxy = EFB1DD491E71849F00E19749 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EFC78F1B1E703EDE000C86BD /* Main.storyboard */ = {
@@ -168,6 +248,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EFB1DD4B1E71849F00E19749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QVX44SZ46V;
+				INFOPLIST_FILE = DoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DH.DoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Done.app/Done";
+			};
+			name = Debug;
+		};
+		EFB1DD4C1E71849F00E19749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QVX44SZ46V;
+				INFOPLIST_FILE = DoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DH.DoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Done.app/Done";
+			};
+			name = Release;
+		};
 		EFC78F241E703EDE000C86BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,6 +398,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EFB1DD4D1E71849F00E19749 /* Build configuration list for PBXNativeTarget "DoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB1DD4B1E71849F00E19749 /* Debug */,
+				EFB1DD4C1E71849F00E19749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EFC78F0F1E703EDE000C86BD /* Build configuration list for PBXProject "Done" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
