@@ -38,7 +38,8 @@ class TodoMethodsTests: XCTestCase {
     }
     
     func testThatUpdateTextUpdatesTheText() {
-        todo.updateText(newText: "Buy coffee ☕️")
-        XCTAssert(todo.text == "Buy coffee ☕️")
+        let updatedText = "Buy coffee ☕️"
+        todo.updateText(newText: updatedText)
+        XCTAssert(todo.text == updatedText, ".text was not '\(updatedText)'")
     }
 }
