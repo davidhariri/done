@@ -21,17 +21,17 @@ class Todo {
         self.updated = nil
     }
     
-    func wasUpdated() {
+    func markUpdated() {
         self.updated = Date()
     }
     
     func toggleDone() {
         self.done = !self.done
-        self.wasUpdated()
+        self.markUpdated()
     }
     
     func updateText(newText: String) {
         self.text = newText
-        self.wasUpdated()
+        self.markUpdated()
     }
 }

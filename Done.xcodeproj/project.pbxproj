@@ -14,6 +14,7 @@
 		EFC78F1F1E703EDE000C86BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F1E1E703EDE000C86BD /* Assets.xcassets */; };
 		EFC78F221E703EDE000C86BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F201E703EDE000C86BD /* LaunchScreen.storyboard */; };
 		EFC78F2A1E7040D3000C86BD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F291E7040D3000C86BD /* Todo.swift */; };
+		EFF69B631E72DFD300005F4D /* TodoMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF69B621E72DFD300005F4D /* TodoMethodTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		EFC78F211E703EDE000C86BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFC78F231E703EDE000C86BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC78F291E7040D3000C86BD /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		EFF69B621E72DFD300005F4D /* TodoMethodTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoMethodTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		EFB1DD451E71849F00E19749 /* DoneTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFF69B621E72DFD300005F4D /* TodoMethodTests.swift */,
 				EFB1DD461E71849F00E19749 /* DoneTests.swift */,
 				EFB1DD481E71849F00E19749 /* Info.plist */,
 			);
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF69B631E72DFD300005F4D /* TodoMethodTests.swift in Sources */,
 				EFB1DD471E71849F00E19749 /* DoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				EFB1DD4C1E71849F00E19749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFC78F0F1E703EDE000C86BD /* Build configuration list for PBXProject "Done" */ = {
 			isa = XCConfigurationList;

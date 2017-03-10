@@ -9,7 +9,7 @@
 import XCTest
 @testable import Done
 
-class TodoDefaultAttributesTests: XCTestCase {
+class TodoMethodsTests: XCTestCase {
     var todo: Todo!
     
     override func setUp() {
@@ -22,15 +22,23 @@ class TodoDefaultAttributesTests: XCTestCase {
         todo = nil
     }
     
-    func testThatIsIsNotDone() {
-        XCTAssert(todo.done == false, ".done was not false")
+    func testThatToggleDoneTogglesDone() {
+        todo.toggleDone()
+        XCTAssert(todo.done, ".done was not true after toggleDone()")
+        todo.toggleDone()
+        XCTAssert(!todo.done, ".done was not false after toggleDone()")
     }
     
-    func testThatItHasText() {
-        XCTAssert(todo.text == "Test", ".text was not 'Test'. Got '\(todo.text)'")
+    func testThatMarkUpdatedChangesUpdatedDate() {
+        todo.markUpdated()
+        let currentDate = Date()
+        XCTAssert(todo.updated != nil, ".updated was nil")
+        XCTAssert(round((todo.updated?.timeIntervalSince1970)!) ==
+            round(currentDate.timeIntervalSince1970), ".updated was not the same as now")
     }
     
-    func testThatItHasNoUpdatedValue() {
-        XCTAssert(todo.updated == nil, ".updated was not nil")
+    func testThatUpdateTextUpdatesTheText() {
+        todo.updateText(newText: "Buy coffee ☕️")
+        XCTAssert(todo.text == "Buy coffee ☕️")
     }
 }
