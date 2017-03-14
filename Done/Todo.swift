@@ -8,30 +8,38 @@
 
 import Foundation
 
-class Todo {
+class Todo: DoneBase {
     var text: String
-    var done: Bool
-    let created: Date
-    var updated: Date?
+    var done: Bool = false
+    var selected: Bool = false
     
-    init(text: String) {
-        self.text = text
-        self.done = false
-        self.created = Date()
-        self.updated = nil
+    init(withText t: String) {
+        self.text = t
     }
     
-    func markUpdated() {
-        self.updated = Date()
+    // Change the done property explicitly rather
+    // than using toggleDone()
+    func markDone(withDone d: Bool) {
+        done = d
     }
     
+    // Used to mark the done property as the opposite
+    // of what it is right now
     func toggleDone() {
-        self.done = !self.done
-        self.markUpdated()
+        markDone(withDone: !done)
+        markUpdated()
     }
     
-    func updateText(newText: String) {
-        self.text = newText
-        self.markUpdated()
+    // Used for when a TodoList is in editing mode
+    // and a user is editing multiple todos at once
+    func toggleSelected() {
+        selected = !selected
+    }
+    
+    // This method should be used to update the
+    // text content of the Todo item
+    func updateText(withText t: String) {
+        text = t
+        markUpdated()
     }
 }

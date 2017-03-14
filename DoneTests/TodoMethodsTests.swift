@@ -14,7 +14,7 @@ class TodoMethodsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        todo = Todo(text: "Test")
+        todo = Todo(withText: "Test")
     }
     
     override func tearDown() {
@@ -29,17 +29,9 @@ class TodoMethodsTests: XCTestCase {
         XCTAssert(!todo.done, ".done was not false after toggleDone()")
     }
     
-    func testThatMarkUpdatedChangesUpdatedDate() {
-        todo.markUpdated()
-        let currentDate = Date()
-        XCTAssert(todo.updated != nil, ".updated was nil")
-        XCTAssert(round((todo.updated?.timeIntervalSince1970)!) ==
-            round(currentDate.timeIntervalSince1970), ".updated was not the same as now")
-    }
-    
     func testThatUpdateTextUpdatesTheText() {
         let updatedText = "Buy coffee ☕️"
-        todo.updateText(newText: updatedText)
+        todo.updateText(withText: updatedText)
         XCTAssert(todo.text == updatedText, ".text was not '\(updatedText)'")
     }
 }
