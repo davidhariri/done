@@ -21,18 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-x7-sVe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li2-IK-vJ8">
+                                <rect key="frame" x="16" y="20" width="288" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" red="0.1219431459903717" green="0.12476898729801178" blue="0.18443767726421356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6F-UT-fqJ">
+                                <rect key="frame" x="277" y="20" width="27" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cBn-x7-sVe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AEe-Uj-JRD"/>
-                            <constraint firstItem="cBn-x7-sVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FsN-4e-Srt"/>
-                            <constraint firstItem="cBn-x7-sVe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bf0-Dq-hsn"/>
-                            <constraint firstItem="cBn-x7-sVe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iJC-jZ-gQu"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="todoListLabel" destination="Li2-IK-vJ8" id="d8u-mz-MkG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

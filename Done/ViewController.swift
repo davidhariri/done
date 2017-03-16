@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var todoListLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var todos = [Todo]()
-        todos.append(Todo(withText: "First Todo"))
-        print(todos)
+        let todoList = TodoList()
+        todoList.name = "Test List"
+        todoList.add(todo: Todo(withText: "First Todo"))
+        todoListLabel.text = todoList.name
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 
