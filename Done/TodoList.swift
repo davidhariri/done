@@ -11,7 +11,7 @@ import Foundation
 class TodoList: DoneBase {
     var items = [Todo]()
     var length: Int = 0
-    var name: String = ""
+    var name: String? = nil
     var editing: Bool = false
     var doneMarker: Bool = true
     
