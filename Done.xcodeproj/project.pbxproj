@@ -21,6 +21,7 @@
 		EFC78F1F1E703EDE000C86BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F1E1E703EDE000C86BD /* Assets.xcassets */; };
 		EFC78F221E703EDE000C86BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F201E703EDE000C86BD /* LaunchScreen.storyboard */; };
 		EFC78F2A1E7040D3000C86BD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F291E7040D3000C86BD /* Todo.swift */; };
+		EFCC34731E8851990016BDD4 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC34721E8851990016BDD4 /* TodoListView.swift */; };
 		EFF69B631E72DFD300005F4D /* TodoAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF69B621E72DFD300005F4D /* TodoAttributesTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		EFC78F211E703EDE000C86BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFC78F231E703EDE000C86BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC78F291E7040D3000C86BD /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		EFCC34721E8851990016BDD4 /* TodoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		EFF69B621E72DFD300005F4D /* TodoAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAttributesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				EFC78F291E7040D3000C86BD /* Todo.swift */,
 				EF16A2811E76C0BF00C7F6A2 /* TodoList.swift */,
 				EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */,
+				EFCC34721E8851990016BDD4 /* TodoListView.swift */,
 			);
 			path = Done;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				EF1CC79E1E7827110032A5FB /* DoneBase.swift in Sources */,
 				EFC78F1A1E703EDE000C86BD /* ViewController.swift in Sources */,
 				EFC78F2A1E7040D3000C86BD /* Todo.swift in Sources */,
+				EFCC34731E8851990016BDD4 /* TodoListView.swift in Sources */,
 				EFC78F181E703EDE000C86BD /* AppDelegate.swift in Sources */,
 				EF16A2821E76C0BF00C7F6A2 /* TodoList.swift in Sources */,
 			);

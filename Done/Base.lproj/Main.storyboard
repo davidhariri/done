@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,63 +20,13 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="List Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-EM-iyJ">
-                                <rect key="frame" x="16" y="20" width="290" height="70"/>
-                                <color key="tintColor" red="0.121943146" green="0.12476898729999999" blue="0.18443767729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="sEp-Lh-NAq"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="listTitleWasEdited:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gaQ-DG-f1q"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnH-4H-5Zx">
-                                <rect key="frame" x="306" y="20" width="53" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="0hg-SB-m1S"/>
-                                    <constraint firstAttribute="height" constant="70" id="6ge-Wi-n8K"/>
-                                    <constraint firstAttribute="width" constant="53" id="gaY-s7-9UE"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="o7r-I6-Ftj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.121943146" green="0.12476898729999999" blue="0.18443767729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="editButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0n-da-b6d"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="RDG-EM-iyJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-53" id="1Gt-gb-VZa"/>
-                            <constraint firstItem="EnH-4H-5Zx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JDG-AM-GYx"/>
-                            <constraint firstItem="RDG-EM-iyJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MSV-fN-BMz"/>
-                            <constraint firstItem="EnH-4H-5Zx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Of8-UQ-6BN"/>
-                            <constraint firstItem="RDG-EM-iyJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gfu-YC-AWM"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fEx-jW-iRX" appends="YES" id="Wyh-KR-oi5"/>
-                        </connections>
                     </view>
-                    <connections>
-                        <outlet property="editButton" destination="EnH-4H-5Zx" id="PU4-uN-hH1"/>
-                        <outlet property="titleField" destination="RDG-EM-iyJ" id="Ql0-LI-2Gs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fEx-jW-iRX">
-                    <connections>
-                        <action selector="didTouch:" destination="BYZ-38-t0r" id="ZMa-Wx-pG6"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="31.875" y="38.028169014084504"/>
+            <point key="canvasLocation" x="31.199999999999999" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
