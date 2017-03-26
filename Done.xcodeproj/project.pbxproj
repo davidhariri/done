@@ -119,8 +119,8 @@
 				EFC78F231E703EDE000C86BD /* Info.plist */,
 				EF1CC79D1E7827110032A5FB /* DoneBase.swift */,
 				EFC78F291E7040D3000C86BD /* Todo.swift */,
-				EF16A2811E76C0BF00C7F6A2 /* TodoList.swift */,
 				EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */,
+				EF16A2811E76C0BF00C7F6A2 /* TodoList.swift */,
 				EFCC34721E8851990016BDD4 /* TodoListView.swift */,
 			);
 			path = Done;

@@ -10,75 +10,87 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     let todoLists = TodoListProvider()
-    let generator = UIImpactFeedbackGenerator(style: UIImpactFeedbackStyle.medium)
+    var todoListsScrollView = UIScrollView()
+    var SCREEN = CGSize()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .black
+        SCREEN = view.frame.size
         
-/*
-
-         View Hierarchy:
-         view
-            todoListsScrollView
-                todoListView
-                    todoListTitle
-                    todoListEditButton
-                    todoListTableView
-                        todoListCell
-                            ...
-            todoListsActionBar
-         
-*/
+        view.backgroundColor = .black
         
-        // View Constants
-        let SCREEN = view.frame.size
-        
-        let todoListsScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: SCREEN.width, height: SCREEN.height))
+        setUpTodoListsScrollView()
+    }
+    
+    func setUpTodoListsScrollView() {
+        todoListsScrollView = UIScrollView(
+            frame: CGRect(
+                x: 0,
+                y: 0,
+                width: SCREEN.width,
+                height: SCREEN.height
+            )
+        )
         
         todoListsScrollView.backgroundColor = .clear
-        
-        self.view.addSubview(todoListsScrollView)
-        
         todoListsScrollView.isPagingEnabled = true
         todoListsScrollView.bounces = true
         todoListsScrollView.alwaysBounceHorizontal = true
         todoListsScrollView.delegate = self
+        view.addSubview(todoListsScrollView)
+        drawTodoLists()
+    }
+    
+    func getTodoListView(withXCoord x: CGFloat) -> TodoListView {
+        let todoView = TodoListView(
+            frame: CGRect(
+                x: x,
+                y: 0,
+                width: SCREEN.width,
+                height: SCREEN.height
+            )
+        )
         
+        todoView.backgroundColor = .white
+        
+        return todoView
+    }
+    
+    func drawTodoLists() {
+        // Draw all the built todo lists
         for (index, _) in todoLists.todoLists.enumerated() {
             let todoViewXCoord = (CGFloat(index) * SCREEN.width)
-            let todoView = TodoListView(
-                frame: CGRect(
-                    x: todoViewXCoord,
-                    y: 0,
-                    width: SCREEN.width,
-                    height: SCREEN.height
-                )
-            )
-            
-            todoView.backgroundColor = .white
-
-            // Add the TodoListView
+            let todoView = getTodoListView(withXCoord: todoViewXCoord)
             todoListsScrollView.addSubview(todoView)
         }
         
+        // Draw the placeholder new todolist
+        let placeHolderView = getTodoListView(
+            withXCoord: CGFloat(todoLists.todoLists.count) * SCREEN.width)
+
+        todoListsScrollView.addSubview(placeHolderView)
+        
         todoListsScrollView.contentSize = CGSize(
-            width: (CGFloat(todoLists.todoLists.count) * SCREEN.width),
+            width: (CGFloat(todoLists.todoLists.count + 1) * SCREEN.width),
             height: SCREEN.height
         )
-        
-        generator.prepare()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x == -50.0 {
-            generator.impactOccurred()
+    // When todoListsScrollView overscrolls past 64 points we
+    // should add another todoList
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.x + scrollView.frame.size.width
+        
+        if (bottomEdge >= scrollView.contentSize.width) &&
+            (todoLists.todoLists[todoLists.todoLists.count-1].name != nil) {
+            todoLists.add()
+            drawTodoLists()
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
 

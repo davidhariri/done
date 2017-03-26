@@ -25,7 +25,7 @@ class TodoListView: UIView {
     
     // Sets up the text field with all default properties
     func setUpTitleInput() {
-        titleInput.placeholder = "List Name"
+        titleInput.placeholder = "My New List"
         titleInput.minimumFontSize = 16
         titleInput.autocapitalizationType = .words
         titleInput.font = .systemFont(ofSize: 38, weight: UIFontWeightSemibold)
