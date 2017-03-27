@@ -112,12 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				EFC78F171E703EDE000C86BD /* AppDelegate.swift */,
-				EFC78F191E703EDE000C86BD /* ViewController.swift */,
 				EFC78F1B1E703EDE000C86BD /* Main.storyboard */,
 				EFC78F1E1E703EDE000C86BD /* Assets.xcassets */,
 				EFC78F201E703EDE000C86BD /* LaunchScreen.storyboard */,
 				EFC78F231E703EDE000C86BD /* Info.plist */,
 				EF1CC79D1E7827110032A5FB /* DoneBase.swift */,
+				EFC78F191E703EDE000C86BD /* ViewController.swift */,
 				EFC78F291E7040D3000C86BD /* Todo.swift */,
 				EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */,
 				EF16A2811E76C0BF00C7F6A2 /* TodoList.swift */,

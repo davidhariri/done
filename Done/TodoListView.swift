@@ -16,11 +16,27 @@ class TodoListView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        // Basic styles
+        backgroundColor = .white
+        
+        // Set up a gesture recognizer for tapping out of editing the title
+        let tapRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(viewWasTapped)
+        )
+        
+        self.addGestureRecognizer(tapRecognizer)
+        
         setUpTitleInput()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func viewWasTapped(_ selector: UITapGestureRecognizer) {
+        self.titleInput.resignFirstResponder()
     }
     
     // Sets up the text field with all default properties
@@ -32,6 +48,7 @@ class TodoListView: UIView {
         titleInput.returnKeyType = .done
         titleInput.adjustsFontSizeToFitWidth = true
         titleInput.textColor = blackColor
+        titleInput.tintColor = blackColor
         titleInput.frame.size = CGSize(
             width: frame.width - 32,
             height: 70

@@ -38,11 +38,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         todoListsScrollView.bounces = true
         todoListsScrollView.alwaysBounceHorizontal = true
         todoListsScrollView.delegate = self
+
         view.addSubview(todoListsScrollView)
+        
         drawTodoLists()
     }
     
-    func getTodoListView(withXCoord x: CGFloat) -> TodoListView {
+    func makeTodoListView(withXCoord x: CGFloat) -> TodoListView {
         let todoView = TodoListView(
             frame: CGRect(
                 x: x,
@@ -52,8 +54,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             )
         )
         
-        todoView.backgroundColor = .white
-        
         return todoView
     }
     
@@ -61,12 +61,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Draw all the built todo lists
         for (index, _) in todoLists.todoLists.enumerated() {
             let todoViewXCoord = (CGFloat(index) * SCREEN.width)
-            let todoView = getTodoListView(withXCoord: todoViewXCoord)
+            let todoView = makeTodoListView(withXCoord: todoViewXCoord)
             todoListsScrollView.addSubview(todoView)
         }
         
         // Draw the placeholder new todolist
-        let placeHolderView = getTodoListView(
+        let placeHolderView = makeTodoListView(
             withXCoord: CGFloat(todoLists.todoLists.count) * SCREEN.width)
 
         todoListsScrollView.addSubview(placeHolderView)
@@ -87,6 +87,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             todoLists.add()
             drawTodoLists()
         }
+    }
+    
+    // When the scrollview is swiped we should dismiss any keyboards
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
