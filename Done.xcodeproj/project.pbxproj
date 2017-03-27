@@ -13,10 +13,11 @@
 		EF1CC7A01E7829EA0032A5FB /* DoneBaseAttibutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC79F1E7829EA0032A5FB /* DoneBaseAttibutesTests.swift */; };
 		EF1CC7A21E782ACC0032A5FB /* DoneBaseMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CC7A11E782ACC0032A5FB /* DoneBaseMethodsTests.swift */; };
 		EF74180C1E7898E000152945 /* TodoListAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF74180B1E7898E000152945 /* TodoListAttributesTests.swift */; };
+		EF7741C41E8941560074C622 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7741C31E8941560074C622 /* TodoListViewController.swift */; };
 		EF7EB5661E7B0F610015CA75 /* TodoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */; };
 		EFB1DD471E71849F00E19749 /* TodoMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1DD461E71849F00E19749 /* TodoMethodsTests.swift */; };
 		EFC78F181E703EDE000C86BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F171E703EDE000C86BD /* AppDelegate.swift */; };
-		EFC78F1A1E703EDE000C86BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F191E703EDE000C86BD /* ViewController.swift */; };
+		EFC78F1A1E703EDE000C86BD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC78F191E703EDE000C86BD /* RootViewController.swift */; };
 		EFC78F1D1E703EDE000C86BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F1B1E703EDE000C86BD /* Main.storyboard */; };
 		EFC78F1F1E703EDE000C86BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F1E1E703EDE000C86BD /* Assets.xcassets */; };
 		EFC78F221E703EDE000C86BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC78F201E703EDE000C86BD /* LaunchScreen.storyboard */; };
@@ -42,13 +43,14 @@
 		EF1CC79F1E7829EA0032A5FB /* DoneBaseAttibutesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneBaseAttibutesTests.swift; sourceTree = "<group>"; };
 		EF1CC7A11E782ACC0032A5FB /* DoneBaseMethodsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneBaseMethodsTests.swift; sourceTree = "<group>"; };
 		EF74180B1E7898E000152945 /* TodoListAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListAttributesTests.swift; sourceTree = "<group>"; };
+		EF7741C31E8941560074C622 /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListProvider.swift; sourceTree = "<group>"; };
 		EFB1DD441E71849F00E19749 /* DoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB1DD461E71849F00E19749 /* TodoMethodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoMethodsTests.swift; sourceTree = "<group>"; };
 		EFB1DD481E71849F00E19749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC78F141E703EDE000C86BD /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC78F171E703EDE000C86BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFC78F191E703EDE000C86BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFC78F191E703EDE000C86BD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EFC78F1C1E703EDE000C86BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFC78F1E1E703EDE000C86BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFC78F211E703EDE000C86BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,11 +119,12 @@
 				EFC78F201E703EDE000C86BD /* LaunchScreen.storyboard */,
 				EFC78F231E703EDE000C86BD /* Info.plist */,
 				EF1CC79D1E7827110032A5FB /* DoneBase.swift */,
-				EFC78F191E703EDE000C86BD /* ViewController.swift */,
+				EFC78F191E703EDE000C86BD /* RootViewController.swift */,
 				EFC78F291E7040D3000C86BD /* Todo.swift */,
 				EF7EB5651E7B0F610015CA75 /* TodoListProvider.swift */,
 				EF16A2811E76C0BF00C7F6A2 /* TodoList.swift */,
 				EFCC34721E8851990016BDD4 /* TodoListView.swift */,
+				EF7741C31E8941560074C622 /* TodoListViewController.swift */,
 			);
 			path = Done;
 			sourceTree = "<group>";
@@ -244,9 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7741C41E8941560074C622 /* TodoListViewController.swift in Sources */,
 				EF7EB5661E7B0F610015CA75 /* TodoListProvider.swift in Sources */,
 				EF1CC79E1E7827110032A5FB /* DoneBase.swift in Sources */,
-				EFC78F1A1E703EDE000C86BD /* ViewController.swift in Sources */,
+				EFC78F1A1E703EDE000C86BD /* RootViewController.swift in Sources */,
 				EFC78F2A1E7040D3000C86BD /* Todo.swift in Sources */,
 				EFCC34731E8851990016BDD4 /* TodoListView.swift in Sources */,
 				EFC78F181E703EDE000C86BD /* AppDelegate.swift in Sources */,

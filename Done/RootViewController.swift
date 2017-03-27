@@ -6,10 +6,21 @@
 //  Copyright © 2017 David Hariri. All rights reserved.
 //
 
+/*
+ 
+RootViewController handles:
+    - Scrolling through TodoLists
+    - Mounting the TodoListProvider
+    - Mounting TodoListViewControllers with their TodoLists
+    - Creating the placeholder "New" TodoListView
+    - Basic styling of the base of the app
+
+*/
+
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-    let todoLists = TodoListProvider()
+    let provider = TodoListProvider()
     var todoListsScrollView = UIScrollView()
     var SCREEN = CGSize()
     
@@ -59,7 +70,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func drawTodoLists() {
         // Draw all the built todo lists
-        for (index, _) in todoLists.todoLists.enumerated() {
+        for (index, _) in provider.todoLists.enumerated() {
             let todoViewXCoord = (CGFloat(index) * SCREEN.width)
             let todoView = makeTodoListView(withXCoord: todoViewXCoord)
             todoListsScrollView.addSubview(todoView)
@@ -67,12 +78,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         // Draw the placeholder new todolist
         let placeHolderView = makeTodoListView(
-            withXCoord: CGFloat(todoLists.todoLists.count) * SCREEN.width)
+            withXCoord: CGFloat(provider.todoLists.count) * SCREEN.width)
 
         todoListsScrollView.addSubview(placeHolderView)
         
         todoListsScrollView.contentSize = CGSize(
-            width: (CGFloat(todoLists.todoLists.count + 1) * SCREEN.width),
+            width: (CGFloat(provider.todoLists.count + 1) * SCREEN.width),
             height: SCREEN.height
         )
     }
@@ -83,8 +94,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let bottomEdge = scrollView.contentOffset.x + scrollView.frame.size.width
         
         if (bottomEdge >= scrollView.contentSize.width) &&
-            (todoLists.todoLists[todoLists.todoLists.count-1].name != nil) {
-            todoLists.add()
+            (provider.todoLists[provider.todoLists.count-1].name != nil) {
+            provider.add()
             drawTodoLists()
         }
     }
